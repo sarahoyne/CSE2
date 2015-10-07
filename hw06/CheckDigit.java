@@ -38,6 +38,7 @@ public class CheckDigit { //declare class
         }
         else if(ISBN.charAt(9)=='X'&& divided != 10){
             check=false;
+           
             System.out.println("Not a valid ISBN. The check digit should be "+ divided+ ".");
             
         }
