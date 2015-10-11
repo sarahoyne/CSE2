@@ -27,17 +27,17 @@ int friday=0;
 int saturday=0;
 int sunday=0;
 
-if(( mondayExpenses*10- (int)(tuesdayExpenses*10))) >= 5) {                                                                                                                                                              mondayExpenses*10-(int)(mondayExpenses*10)>=5) {
+if(( mondayExpenses*10- (int)(tuesdayExpenses*10)) >= 5) {                                                                                                                                                              mondayExpenses*10-(int)(mondayExpenses*10)>=5) {
     monday= (int)(mondayExpenses) + 1;
 }
 else monday=mondayExpense;
 
-if( tuesdayExpenses*10-(int)(tuesdayExpenses*10) >=5) {
+if(( tuesdayExpenses*10-(int)(tuesdayExpenses*10)) >=5) {
     tuesday=(int)(tuesdayExpenses) + 1;
 }
 else tuesday=tuesdayExpenses;
 
-if( wednesdayExpenses*10-(int)(wednesdayExpenses*10) >=5 ) {
+if(( wednesdayExpenses*10-(int)(wednesdayExpenses*10)) >=5 ) {
     wednesday=(int)(wednesdayExpenses) + 1;
 }
 else wednesday=wednesdayExpenses;
