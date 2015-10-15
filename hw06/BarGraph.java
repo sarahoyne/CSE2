@@ -1,109 +1,179 @@
-import java.util.Scanner;
-//imports scanner
-public class BarGraph {
-    public static void main (String[] args) {
-        //main method
-    Scanner myScanner2 = new Scanner(System.in);
-    System.out.print("Enter Monday's expenses in the form xxx.xx");
-    double mondayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Tuesday's expenses in the form xxx.xx");
-    double tuesdayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Wednesday's expenses in the form xxx.xx");
-    double wednesdayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Thursday's expenses in the form xxx.xx");
-    double thursdayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Friday's expenses in the form xxx.xx");
-    double fridayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Saturday's expenses in the form xxx.xx");
-    double saturdayExpenses = myScanner2.nextDouble();
-    System.out.print("Enter Sunday's expenses in the form xxx.xx");
-    double sundayExpenses = myScanner2.nextDouble();
+import java.util.Scanner; //imports scanner
+public class BarGraph{
+    			// declares method
+public static void main(String[] args) {
+
+Scanner myScanner = new Scanner ( System.in ) ; 
+ 	//declare expenses
+double monExp = 0;
+double tueExp = 0;
+double wedExp = 0;
+double thurExp = 0;
+double friExp = 0; 
+double satExp = 0;
+double sunExp = 0;
+
+boolean goodInput = false;
+
+do {
+    try {
+    goodInput = true;
+System.out.print("Input Monday's expenses:  ");
+   monExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Please enter a valid input");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
     
-int monday=0;
-int tuesday=0;
-int wednesday=0;
-int thursday=0;
-int friday=0;
-int saturday=0;
-int sunday=0;
+do {
+    try {
+    goodInput = true;
+System.out.print("imput tuesday's expenses as an int");
+   tueExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
 
-if(( mondayExpenses*10- (int)(tuesdayExpenses*10)) >= 5) {                                                                                                                                                              mondayExpenses*10-(int)(mondayExpenses*10)>=5) {
-    monday= (int)(mondayExpenses) + 1;
+do {
+    try {
+    goodInput = true;
+System.out.print("imput wednesday's expenses as an int");
+   wedExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
+    
+    do {
+    try {
+    goodInput = true;
+System.out.print("imput thursday's expenses as an int");
+   thurExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
+    
+    do {
+    try {
+    goodInput = true;
+System.out.print("imput friday's expenses as an int");
+   friExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
+
+do {
+    try {
+    goodInput = true;
+System.out.print("imput saturday's expenses as an int");
+   satExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
+            
+
+do {
+    try {
+    goodInput = true;
+System.out.print("imput sunday's expenses as an int");
+   sunExp = myScanner.nextDouble();
+} catch (Exception e) {
+ System.out.println("Enter an int, please");
+ goodInput =false;
+ String clear = myScanner.nextLine();
+} 
+} while (!goodInput);
+
+System.out.println("Expenses for Monday:   $"+monExp);
+System.out.println("Expenses for Tuesday:   $"+tueExp);
+System.out.println("Expenses for Wednesday:   $"+wedExp);
+System.out.println("Expenses for Thursday:   $"+thurExp);
+System.out.println("Expenses for Friday:   $"+friExp);
+System.out.println("Expenses for Saturday:   $"+satExp);
+System.out.println("Expenses for Sunday:   $"+sunExp);
+
+System.out.print("Mon:   ");
+int num=0;
+while (num < (Math.round(monExp))){
+System.out.print("*");
+num=num+1;
 }
-else monday=mondayExpense;
+System.out.println("");
 
-if(( tuesdayExpenses*10-(int)(tuesdayExpenses*10)) >=5) {
-    tuesday=(int)(tuesdayExpenses) + 1;
+System.out.print("Tue:   ");
+int num2=0;
+while (num2 < (Math.round(tueExp))){
+System.out.print("*");
+num2=num2+1;
 }
-else tuesday=tuesdayExpenses;
+System.out.println("");
 
-if(( wednesdayExpenses*10-(int)(wednesdayExpenses*10)) >=5 ) {
-    wednesday=(int)(wednesdayExpenses) + 1;
+System.out.print("Wed:   ");
+int num3=0;
+while (num3 < (Math.round(wedExp))){
+System.out.print("*");
+num3=num3+1;
 }
-else wednesday=wednesdayExpenses;
+System.out.println("");
 
-if( thursdayExpenses*10-(int)(thursdayExpenses*10)>=5) {
-    thursday=(int)(thursdayExpenses)+1;
+System.out.print("Thr:   ");
+int num4=0;
+while (num4 < (Math.round(thurExp))){
+System.out.print("*");
+num4=num4+1;
 }
-else thursday=thursdayExpenses;
+System.out.println("");
 
-if( fridayExpenses*10-(int)(fridayExpenses*10)>=5) {
-    friday=(int)(fridayExpenses)+1;
+System.out.print("Fri:   ");
+int num5=0;
+while (num5 < (Math.round(friExp))){
+System.out.print("*");
+num5=num5+1;
 }
-else friday=fridayExpenses;
+System.out.println("");
 
-if( saturdayExpenses*10-(int)(saturdayExpenses*10)>=5) {
-    saturday=(int)(saturdayExpenses)+1;
+System.out.print("Sat:   ");
+int num6=0;
+while (num6 < (Math.round(satExp))){
+System.out.print("*");
+num6=num6+1;
 }
-else saturday=saturdayExpenses;
+System.out.println("");
 
-if( sundayExpenses*10-(int)(sundayExpenses*10)>=5) {
-    sunday=(int)(sundayExpenses)+1;
+System.out.print("Sun:   ");
+int num7=0;
+while (num7 < (Math.round(sunExp))){
+System.out.println("*");
+num7=num7+1;
 }
-else sunday=sundayExpenses;
+System.out.println("");
 
-System.out.print("Mon: ");
-for(int i = 0; i < monday; i++) {
-    System.out.print("*");
+System.out.println("");
+
+double avgExp= ((monExp+tueExp+wedExp+thurExp+friExp+satExp+sunExp)/7);
+System.out.println("Your average weekly expenses are:  $"+avgExp);
+
+double fouryearExp= (208*avgExp)*((Math.random()*40)-20);
+fouryearExp= (int)fouryearExp*100;
+fouryearExp= (double)fouryearExp/100; 
+System.out.println("Your average four year expenses are:  $"+fouryearExp);
+
+
 }
-
-System.out.println();
-System.out.print("Tues: ");
-for(int i= 0; i < tuesday; i++) {
-    System.out.print("*");
-}
-
-System.out.println();
-System.out.print("Wed: ");
-for(int i = 0; i < wednesday; i++) {
-    System.out.print("*");
-}
-
-System.out.println();
-System.out.print("Thrus: ");
-for(int i = 0; i < thursday; i++) {
-    System.out.print("*");
-}
-
-System.out.println();
-System.out.print("Fri: ");
-for(int i = 0; i < wednesday; i++) {
-    System.out.print("*");
-}
-
-System.out.println();
-System.out.print("Sat: ");
-for(int i = 0; i < saturday; i++) {
-    System.out.print("*");
-}
-
-System.out.println();
-System.out.print("Sun: ");
-for(int i = 0; i < sunday; i++) {
-    System.out.print("*")
-}
-
-
-    }
-
 }
