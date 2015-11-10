@@ -20,6 +20,7 @@ public class Shuffling {
         int k=0;
         String [] B = new String[5];
         for (k=0;k<5; k++){
+        //
                      while (k<5){
                          i= (int)(Math.random()*51)+1; //makes random number between 1 and 52
                         B[k]= Array[i]; //uses random value to determine which goes into array A
